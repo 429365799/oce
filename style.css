@@ -1,0 +1,303 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: '微软雅黑', '黑体', 'arial', sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+
+}
+
+.header {
+  background-color: #DCDCDC;
+  padding: 10px 0;
+  position: relative;
+  z-index: 3;
+
+  -o-transition: all .5s;
+  -ms-transition: all .5s;
+  -moz-transition: all .5s;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.logo {
+  display: block;
+}
+
+.nav {
+  max-width: 80%;
+  margin: 0 auto;
+  white-space: nowrap;
+  line-height: 18px;
+  padding-top: 20px;
+}
+
+.nav li {
+  display: inline-block;
+  width: 12.5%;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #222222;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -moz-tap-highlight-color: rgba(0,0,0,0);
+  tap-highlight-color: rgba(0,0,0,0);
+  -o-transition: color .5s;
+  -ms-transition: color .5s;
+  -moz-transition: color .5s;
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+
+.nav li:hover {
+  color: #24bfc4;
+}
+
+.nav li span {
+  display: block;
+}
+
+.menu-button {
+  width: 23px;
+  position: absolute;
+  top: 50%;
+  margin-top: -11px;
+  right: 10px;
+}
+.menu-button > div {
+  width: 100%;
+  height: 5px;
+  margin-bottom: 4px;
+  background: #000000;
+  border-radius: 3px;
+}
+.menu-button.active > div {
+  background: #24bfc4;
+}
+.menu-button > div.last-item {
+  margin-bottom: 0;
+}
+
+.row {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 10%;
+}
+
+.row-full img, .row img {
+  max-width: 100%;
+}
+
+.row-full {
+  width: 100%;
+  padding-top: 40%;
+  position: relative;
+}
+
+.row-full .swiper-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.row-full .swiper-slide {
+  background-size: contain;;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.slide-1 {
+  background-image: url(images/web-site-01.png);
+}
+.slide-2 {
+  background-image: url(images/web-site-02.png);
+}
+.slide-3 {
+  background-image: url(images/web-site-03.png);
+}
+
+.pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #555;
+  margin: 0 5px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+
+.row .row-title {
+  font-size: 14px;
+  color: #2B2B2B;
+  text-align: center;
+  height: 100px;
+}
+
+.divid-line {
+  height: 1px;
+  width: 100%;
+  background-color: #CCCCCC;
+  margin-top: 15px;
+}
+
+.footer {
+  height: 150px;
+  border-top: 1px solid #CCCCCC;
+  text-align: center;
+  font-size: 14px;
+  color: #222222;
+}
+.footer > span {
+  display: inline-block;
+  width: 30%;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.footer a.text {
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -moz-tap-highlight-color: rgba(0,0,0,0);
+  tap-highlight-color: rgba(0,0,0,0);
+  -o-transition: color .5s;
+  -ms-transition: color .5s;
+  -moz-transition: color .5s;
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+.footer a.text:hover {
+  color: #24bfc4;
+}
+
+.footer > span > img {
+  display: inline-block;
+  width: 30px;
+  padding: 0 20px;
+}
+
+/** 手机上显示 */
+@media only screen and (max-width: 426px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    white-space: nowrap;
+    background: #ffffff;
+    margin: 0;
+    max-width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .nav-anim {
+    transition: all .5s;
+    transform: scale(.8);
+    opacity: 0;
+  }
+  .nav-anim.active {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .nav li {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 12px 0;
+    color: #6F6E6E;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .nav li span {
+    display: inline-block;
+  }
+
+  .header {
+    height: 50px;
+  }
+
+  .logo {
+    height: 100%;
+  }
+
+  .footer > span {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+
+}
+
+/** 电脑上 */
+@media only screen and (min-width: 427px) {
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .header {
+    height: 180px;
+  }
+
+  .logo {
+    margin: 0 auto;
+    height: 60%;
+  }
+
+  .scroll-active .header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+  }
+  .scroll-active .desktop.logo {
+    display: inline-block;
+    position: absolute;
+    left: 2%;
+    top: 20px;
+  }
+  .scroll-active .row-full {
+    padding-top: 40%;
+  }
+
+  .pagination {
+    bottom: 10%;
+  }
+}
